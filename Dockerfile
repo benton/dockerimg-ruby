@@ -2,8 +2,8 @@ FROM ubuntu:latest
 MAINTAINER Benton Roberts <benton@bentonroberts.com>
 
 # set ruby version and location
-ENV RUBY_V 1.9.3
-ENV RUBY_P 547
+ENV RUBY_V 1.9.2
+ENV RUBY_P 320
 ENV BASE_URL http://cache.ruby-lang.org/pub/ruby
 
 # update ubuntu and install ruby requirements
