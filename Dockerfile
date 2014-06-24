@@ -2,8 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Benton Roberts <benton@bentonroberts.com>
 
 # set ruby version and location
-ENV RUBY_V 1.9.3
-ENV RUBY_P 547
+ENV RUBY_V 2.1.2
 ENV BASE_URL http://cache.ruby-lang.org/pub/ruby
 
 # update ubuntu and install ruby requirements
@@ -18,7 +17,7 @@ ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
 # install ruby
-RUN (curl -v ${BASE_URL}/ruby-${RUBY_V}-p${RUBY_P}.tar.gz | tar -xz) && \
+RUN (curl -v ${BASE_URL}/ruby-${RUBY_V}.tar.gz | tar -xz) && \
   (cd ruby-* && ./configure --disable-install-doc && make && make install) && \
   rm -rf ruby-*
 
